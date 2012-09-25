@@ -1,0 +1,22 @@
+
+#highway{
+  line-color:@road;
+  [highway="secondary"]{line-width:3;}
+[highway="unclassified"]{}
+[highway="primary"]{line-width:4;}
+[highway="track"]{}
+[highway="footway"]{}
+[highway="motorway"]{line-width:4;}
+[highway="tertiary"]{}
+[highway="trunk"]{}
+[highway="motorway_link"]{line-width:4;}
+[highway="steps"]{}
+[highway="pedestrian"]{}
+[highway="service"]{}
+[highway="cycleway"]{}
+[highway="living_street"]{}
+[highway="path"]{}
+[highway="residential"]{}
+[highway="road"]{}
+[highway="construction"]{}
+}
