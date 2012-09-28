@@ -1,6 +1,16 @@
-  @water:#52a8ca;
-@road:#6d828a;
+
+@world:#dad2c1;
+@water:#52a8ca;
+@road:#b5b5b5;
 @buildings:#b96060;
+@frontieres:#002172;
+
+
+
+Map{background-color:@world;}
+#World{background-color:@world;}
+
+
 
 #water
 {
@@ -9,21 +19,16 @@
   polygon-fill:@water;
   polygon-clip:true;
 }
-
-#buildings
-{
-  line-width:1;
-  line-color:@buildings;
-  polygon-fill:red;
-  polygon-opacity:0;
-}
-
-
-
+#riversLines{
+  line-width:4;
+  line-color:@water;
+  }
 #lakes {
   line-color:#594;
   line-width:0.5;
   polygon-opacity:1;
   polygon-fill:#ae8;
 }
+
+
 

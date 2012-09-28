@@ -18,15 +18,17 @@
     ],
     "layer": "buildings",
     "template_teaser": "<div>\n <div>\n  <strong>{{{name}}}</strong>\n </div> \n <div>\n  {{{osm_id}}}\n </div>\n</div>\n\n\n",
-    "template_location": "http://www.google.com"
+    "template_location": "http://127.0.0.1/~polpols/script.php?osm_id={{{osm_id}}}"
   },
-  "minzoom": 14,
+  "minzoom": 13,
   "maxzoom": 17,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss",
     "highways",
-    "label.mss"
+    "label.mss",
+    "human.mss",
+    "frontieres.mss"
   ],
   "Layer": [
     {
@@ -47,7 +49,7 @@
         "extent_cache": "auto"
       },
       "id": "buildings",
-      "class": "",
+      "class": "buildings",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "name": "buildings",
@@ -58,6 +60,33 @@
         46.83537685666179
       ],
       "advanced": {}
+    },
+    {
+      "extent": [
+        7.101162468197038,
+        46.783060166099354,
+        7.202387598852064,
+        46.83537685666179
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT building, name,osm_id,way \nfrom planet_osm_polygon  \nwhere building is not null           \nand name is not null) \nAS NAMED",
+        "key_field": "osm_id",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "790497.79,5906735.58,801766.12,5915244.66",
+        "dbname": "StreetTV",
+        "host": "127.0.0.1",
+        "port": "5432",
+        "user": "polpols",
+        "password": "ben3shi4huo3"
+      },
+      "id": "named_buildings",
+      "class": "buildings",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "named_buildings"
     },
     {
       "Datasource": {
@@ -148,6 +177,64 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "highway"
+    },
+    {
+      "extent": [
+        7.101162468197038,
+        46.783060166099354,
+        7.202387598852064,
+        46.83537685666179
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT                                                                                                                                                                    way,osm_id, \"addr:housenumber\"                                                                                                                                                       from planet_osm_polygon                                                                                                                                                              where \"addr:housenumber\" = '17')\nAS M17",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "790497.79,5906735.58,801766.12,5915244.66",
+        "dbname": "StreetTV",
+        "host": "127.0.0.1",
+        "port": "5432",
+        "user": "polpols",
+        "password": "ben3shi4huo3"
+      },
+      "id": "my17",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "my17"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        7.094448549595056,
+        46.717996754834616,
+        7.273042970556972,
+        46.97045617020886
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT \nosm_id,way,\nadmin_level,name,boundary,ref \nfrom planet_osm_line                                                                                                                 where boundary is not null                                                                                                                                                           )\n as boundaries",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "789750.4,5896164.83,809631.44,5937253.1",
+        "dbname": "StreetTV",
+        "host": "127.0.0.1",
+        "port": "5432",
+        "user": "polpols",
+        "password": "ben3shi4huo3",
+        "id": "frontieres",
+        "project": "StreetTV_Fribourg",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "frontieres",
+      "class": "frontieres",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "frontieres"
     }
   ],
   "scale": 1,

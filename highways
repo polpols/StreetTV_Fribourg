@@ -1,22 +1,122 @@
 
 #highway{
   line-color:@road;
-  [highway="secondary"]{line-width:3;}
-[highway="unclassified"]{}
-[highway="primary"]{line-width:4;}
-[highway="track"]{}
-[highway="footway"]{}
-[highway="motorway"]{line-width:4;}
-[highway="tertiary"]{}
-[highway="trunk"]{}
-[highway="motorway_link"]{line-width:4;}
-[highway="steps"]{}
-[highway="pedestrian"]{}
-[highway="service"]{}
-[highway="cycleway"]{}
-[highway="living_street"]{}
-[highway="path"]{}
-[highway="residential"]{}
-[highway="road"]{}
-[highway="construction"]{}
+ line-comp-op:overlay;
+  [zoom=14]{
+    [highway="motorway_link"]{line-width:5;}
+    [highway="primary"]{line-width:5;}
+    [highway="motorway"]{line-width:5;}
+    
+    [highway="secondary"]{line-width:4;}
+    
+    [highway="living_street"]{line-width:3;}
+    [highway="residential"]{line-width:3;}
+    [highway="footway"]{line-width:3;}
+    [highway="tertiary"]{line-width:3;}
+    [highway="unclassified"]{line-width:3;}
+    
+[highway="track"]{line-width:2;}
+[highway="trunk"]{line-width:2;}
+[highway="steps"]{line-width:2;}
+[highway="pedestrian"]{line-width:2;}
+[highway="service"]{line-width:2;}
+[highway="cycleway"]{line-width:2;}
+[highway="path"]{line-width:2;}
+[highway="road"]{line-width:2;}
+[highway="construction"]{line-width:2;}
+  } 
+    [zoom=15]{
+    [highway="motorway_link"]{line-width:5;}
+    [highway="primary"]{line-width:5;}
+    [highway="motorway"]{line-width:5;}
+    
+    [highway="secondary"]{line-width:4;}
+    
+    [highway="living_street"]{line-width:3;}
+    [highway="residential"]{line-width:3;}
+    [highway="footway"]{line-width:3;}
+    [highway="tertiary"]{line-width:3;}
+    [highway="unclassified"]{line-width:3;}
+    
+[highway="track"]{line-width:2;}
+[highway="trunk"]{line-width:2;}
+[highway="steps"]{line-width:2;}
+[highway="pedestrian"]{line-width:2;}
+[highway="service"]{line-width:2;}
+[highway="cycleway"]{line-width:2;}
+[highway="path"]{line-width:2;}
+[highway="road"]{line-width:2;}
+[highway="construction"]{line-width:2;}
+  } 
+    [zoom=14]{
+    [highway="motorway_link"]{line-width:5;}
+    [highway="primary"]{line-width:5;}
+    [highway="motorway"]{line-width:5;}
+    
+    [highway="secondary"]{line-width:4;}
+    
+    [highway="living_street"]{line-width:3;}
+    [highway="residential"]{line-width:3;}
+    [highway="footway"]{line-width:3;}
+    [highway="tertiary"]{line-width:3;}
+    [highway="unclassified"]{line-width:3;}
+    
+[highway="track"]{line-width:2;}
+[highway="trunk"]{line-width:2;}
+[highway="steps"]{line-width:2;}
+[highway="pedestrian"]{line-width:2;}
+[highway="service"]{line-width:2;}
+[highway="cycleway"]{line-width:2;}
+[highway="path"]{line-width:2;}
+[highway="road"]{line-width:2;}
+[highway="construction"]{line-width:2;}
+  }  
+  [zoom=16]{
+    [highway="motorway_link"]{line-width:5;}
+    [highway="primary"]{line-width:5;}
+    [highway="motorway"]{line-width:5;}
+    
+    [highway="secondary"]{line-width:4;}
+    
+    [highway="living_street"]{line-width:3;}
+    [highway="residential"]{line-width:3;}
+    [highway="footway"]{line-width:3;}
+    [highway="tertiary"]{line-width:3;}
+    [highway="unclassified"]{line-width:3;}
+    
+[highway="track"]{line-width:2;}
+[highway="trunk"]{line-width:2;}
+[highway="steps"]{line-width:2;}
+[highway="pedestrian"]{line-width:2;}
+[highway="service"]{line-width:2;}
+[highway="cycleway"]{line-width:2;}
+[highway="path"]{line-width:2;}
+[highway="road"]{line-width:2;}
+[highway="construction"]{line-width:2;}
+  } 
+
+    [zoom=17]{
+    [highway="motorway_link"]{line-width:7;}
+    [highway="primary"]{line-width:7;}
+    [highway="motorway"]{line-width:7;}
+    
+    [highway="secondary"]{line-width:6;}
+    
+    [highway="living_street"]{line-width:5;}
+    [highway="residential"]{line-width:5;}
+    [highway="footway"]{line-width:5;}
+    [highway="tertiary"]{line-width:5;}
+    [highway="unclassified"]{line-width:5;}
+    
+[highway="track"]{line-width:4;}
+[highway="trunk"]{line-width:4;}
+[highway="steps"]{line-width:4;}
+[highway="pedestrian"]{line-width:4;}
+[highway="service"]{line-width:4;}
+[highway="cycleway"]{line-width:4;}
+[highway="path"]{line-width:4;}
+[highway="road"]{line-width:4;}
+[highway="construction"]{line-width:4;}
+  } 
+  
 }
