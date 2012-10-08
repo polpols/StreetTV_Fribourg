@@ -1,6 +1,9 @@
 
 @font:"Futura Condensed Medium";
-#highway {
+/*
+@font:"Monaco Regular";
+
+*/#highway {
   text-face-name:@font;
   text-name:"[name]";
   text-placement:line;

@@ -16,3 +16,9 @@
   [zoom=16] {line-width:6;}
   [zoom=17] {line-width:7;}
 }
+#geo{
+line-width:4;
+line-color:#bd4949;
+line-smooth:1;
+
+}
